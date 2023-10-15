@@ -9,7 +9,6 @@ const HomePage = () => {
       <Link href="/login">Login</Link> <br />    
       <Link href="/my/profile">My Profile</Link> <br />      
       <Link href="/my/devices">My Devices</Link> <br />      
-  
     </div>
   );
 };
