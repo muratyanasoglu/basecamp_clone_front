@@ -1,75 +1,77 @@
-import React from "react";
+// pages/login.tsx
+import React from 'react';
 
-const LoginPage: React.FC = () => {
+const LoginPage = () => {
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 py-12 px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto">
+                <div className="max-w-md mx-auto bg-white p-10 rounded-lg shadow-md">
+                    <div>
+                        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                            Welcome Back!
+                        </h2>
+                        <p className="mt-2 text-center text-sm text-gray-600">Enter your details to log into your account</p>
+                    </div>
+                    <div className="mt-8 space-y-6">
+                        <div className="rounded-md shadow-sm -space-y-px">
+                            <div>
+                                <label htmlFor="email-address" className="sr-only">Email Address</label>
+                                <input 
+                                    id="email-address" 
+                                    name="email" 
+                                    type="email" 
+                                    autoComplete="email" 
+                                    required 
+                                    className="appearance-none rounded-t-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Email address" 
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="password" className="sr-only">Password</label>
+                                <input 
+                                    id="password" 
+                                    name="password" 
+                                    type="password" 
+                                    autoComplete="current-password" 
+                                    required 
+                                    className="appearance-none rounded-b-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Password" 
+                                />
+                            </div>
+                        </div>
 
-  
-  return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-          src="../../image/basecamp_logo_icon.png"
-          alt=""
-          className="mx-auto h-28 w-auto"
-        />
-      </div>
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center">
+                                <input 
+                                    id="remember_me" 
+                                    name="remember_me" 
+                                    type="checkbox" 
+                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" 
+                                />
+                                <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
+                                    Remember me
+                                </label>
+                            </div>
 
-      <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-lg bg-white p-8 shadow-lg rounded-lg">
-        <form className="space-y-6" action="#" method="POST">
-          <div>
-            <h1 className="text-xl font-bold text-center">
-              Log in to Basecamp
-            </h1>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-white text-black px-3 my-2 py-3 text-lg border border-black-100 font-semibold leading-6 shadow-sm"
-            >
-              <i>
-                <img
-                  src="https://launchpad-asset2.37signals.com/assets/icons/google-g-c2ca287890a85fbdf16f8d9bb2e7f7cc7f1d3cbf252102c1d92d49b7dd3f2664.svg"
-                  alt=""
-                  className="mx-auto h-6 w-auto"
-                />
-              </i>
-              Sign in with Google
-            </button>
-            <div className="flex items-center justify-center space-x-2 my-5">
-              <div className="w-1/4 h-0.5 bg-gray-300"></div>
-              <div className="text-gray-500">Or, use my email address</div>
-              <div className="w-1/4 h-0.5 bg-gray-300"></div>
+                            <div className="text-sm">
+                                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                    Forgot your password?
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button 
+                                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            >
+                                Log In
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <label
-              htmlFor="email"
-              className="block text-lg font-bold leading-6 text-gray-900"
-            >
-              Email or username
-            </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                placeholder="basecampclone@nuvecore.com"
-                required
-                className="block w-full rounded-md border-0 p-2 text-gray-900 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
+        </div>
+    );
+}
 
-          <div>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md text-black px-3 py-2 text-md font-semibold leading-10 shadow-sm border border-black-100 bg-white"
-            >
-              Next
-            </button>
-          </div>
-        </form>
-      </div>
-          <a href="#" className="text-sm text-blue-500 text-center mt-4">
-            Forgot your password?
-          </a>
-    </div>
-  );
-};
 export default LoginPage;
